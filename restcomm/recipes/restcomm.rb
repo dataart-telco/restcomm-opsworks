@@ -2,7 +2,6 @@
 # Cookbook Name:: restcomm
 # Recipe:: restcomm
 #
-# Copyright (c) 2016 Gennadiy Dubina, All Rights Reserved.
 
 docker_service 'default' do
   action [:create, :start]

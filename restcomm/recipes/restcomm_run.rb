@@ -2,6 +2,7 @@
 # Cookbook Name:: restcomm
 # Recipe:: run
 #
+include_recipe 'hosts::hosts'
 
 lbLayer = search("aws_opsworks_layer", "name:restcomm-loadbalancer").first
 loadBalancers = search("aws_opsworks_instance", "layer_ids:#{lbLayer['layer_id']}").each.map { |i| "#{i['private_ip']}:5065"}.join(',')

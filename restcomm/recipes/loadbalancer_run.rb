@@ -3,6 +3,8 @@
 # Recipe:: loadbalancer_run
 #
 
+include_recipe 'hosts::hosts'
+
 data = node['loadbalancer'] == nil ? node['loadbalancer'] : node
 
 docker_container 'loadbalancer' do

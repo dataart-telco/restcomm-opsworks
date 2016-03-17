@@ -10,6 +10,7 @@ source_url 'https://github.com/dataart-telco/restcomm-opsworks'
 issues_url 'https://github.com/dataart-telco/restcomm-opsworks/issues'
 
 depends 'docker', '~> 2.0'
+depends 'hosts', '~> 0.1.0'
 
 supports 'amazon'
 supports 'ubuntu'

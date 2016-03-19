@@ -17,6 +17,6 @@ docker_container 'restcomm' do
   network_mode 'host'
   repo 'hamsterksu/restcomm'
   tag '7.6.0.831'
-  env ["INIT_PASSWORD=#{data['INIT_PASSWORD']}", "VOICERSS_KYE=#{data['VOICERSS_KYE']}", "MEDIASERVER_LOWEST_PORT=#{data['MEDIASERVER_LOWEST_PORT']}", "MEDIASERVER_HIGHEST_PORT=#{data['MEDIASERVER_HIGHEST_PORT']}", "LOAD_BALANCERS=#{loadBalancers}"]
+  env ["INIT_PASSWORD=#{data['INIT_PASSWORD']}", "VOICERSS_KYE=#{data['VOICERSS_KYE']}", "MEDIASERVER_LOWEST_PORT=#{data['MEDIASERVER_LOWEST_PORT']}", "MEDIASERVER_HIGHEST_PORT=#{data['MEDIASERVER_HIGHEST_PORT']}", "LOAD_BALANCERS=#{loadBalancers}", "PROD_MODE=true"]
   action :run
 end
